@@ -33,7 +33,7 @@ defmodule Mix.Tasks.Rutli.Gen.Migration do
 
     dest_path = Path.join(["priv", "migrations", timestamp() <> "_create_rutli_tables.exs"])
 
-    assigns = [repo: ecto_repo]
+    assigns = %{repo: ecto_repo}
 
     Mix.Generator.copy_template(migration_template, dest_path, assigns)
 
