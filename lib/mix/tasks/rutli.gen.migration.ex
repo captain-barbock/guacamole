@@ -15,7 +15,7 @@ defmodule Mix.Tasks.Rutli.Gen.Migration do
     ecto_repo = 
       case Application.fetch_env(project_app, :ecto_repos) do 
         :error -> raise("There is no Ecto configuration")
-        repos -> hd(repos)
+        {:ok, repos} -> hd(repos)
       end
     IO.inspect(ecto_repo: ecto_repo)
 
