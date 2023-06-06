@@ -1,4 +1,4 @@
-defmodule <%= inspect ecto_repo %>.Migrations.CreateRutliTables do 
+defmodule <%= inspect assigns.repo %>.Migrations.CreateRutliTables do 
   use Ecto.Migration
 
   def change do
